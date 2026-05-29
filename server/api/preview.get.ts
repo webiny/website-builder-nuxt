@@ -5,7 +5,6 @@
  * Usage: GET /api/preview?wb.path=/my-page&wb.preview=true&...
  */
 export default defineEventHandler(event => {
-    console.log('wooooo', event);
     const query = getQuery(event);
     const targetPath = String(query["wb.path"] ?? "/");
 
