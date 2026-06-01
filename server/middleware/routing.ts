@@ -7,7 +7,6 @@
  */
 export default defineEventHandler(async event => {
     const url = getRequestURL(event);
-    console.log(url)
     const { pathname, searchParams } = url;
 
     // Skip Nitro internals, API routes, and static assets

@@ -10,10 +10,10 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@webiny/sdk": "6.4.0-beta.4",
-    "@webiny/website-builder-nuxt": "6.4.0-beta.4",
-    "@webiny/website-builder-sdk": "6.4.0-beta.4",
-    "@webiny/website-builder-vue": "6.4.0-beta.4",
+    "@webiny/sdk": "6.4.0-beta.5",
+    "@webiny/website-builder-nuxt": "6.4.0-beta.6",
+    "@webiny/website-builder-vue": "6.4.0-beta.6",
+    "@webiny/website-builder-sdk": "6.4.0-beta.6",
     "deep-equal": "^2.2.3",
     "mobx": "^6.13.7",
     "nuxt": "^4.4.2",
