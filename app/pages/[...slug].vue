@@ -16,11 +16,11 @@ const { page, languages, currentLanguageCode, languagePaths, isEditing } = await
         />
         <main class="flex-1 mx-auto w-full max-w-7xl px-6 lg:px-8 py-10">
             <NotFound v-if="!page && !isEditing" />
-            <DocumentRenderer
-                v-else
-                :document="page ?? null"
-                :components="editorComponents"
-            />
+            <!-- Editing mode: skip SSR to avoid hydration mismatch (same as Next.js `ssr: false`). -->
+            <ClientOnly v-else-if="isEditing">
+                <DocumentRenderer :document="page ?? null" :components="editorComponents" />
+            </ClientOnly>
+            <DocumentRenderer v-else :document="page ?? null" :components="editorComponents" />
         </main>
     </div>
 </template>
