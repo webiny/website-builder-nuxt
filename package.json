@@ -15,7 +15,6 @@
     "@webiny/website-builder-vue": "6.4.0-beta.6",
     "@webiny/website-builder-sdk": "6.4.0-beta.6",
     "deep-equal": "^2.2.3",
-    "mobx": "^6.13.7",
     "nuxt": "^4.4.2",
     "vue": "^3.5.32",
     "vue-router": "^5.0.4",
@@ -27,3 +26,4 @@
     "typescript": "^5.9.3"
   }
 }
+  
