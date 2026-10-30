@@ -15,13 +15,20 @@ export default defineNuxtConfig({
     // Global CSS (theme variables + Tailwind)
     css: ["~/assets/main.css"],
 
+    // Read at runtime, not at build time, so one build can run against any Webiny project.
+    // Use them in code through `useWebinyConfig()`.
     runtimeConfig: {
         public: {
-            webinyApiKey: process.env.WEBINY_API_KEY ?? "",
-            webinyApiHost: process.env.WEBINY_API_HOST ?? "",
-            webinyApiTenant: process.env.WEBINY_API_TENANT ?? "root",
-            webinyAdminHost: process.env.WEBINY_ADMIN_HOST ?? ""
+            webinyApiKey: "{{WEBINY_API_KEY}}",
+            webinyApiHost: "{{WEBINY_API_HOST}}",
+            webinyApiTenant: "{{WEBINY_API_TENANT}}",
+            webinyAdminHost: "{{WEBINY_ADMIN_HOST}}"
         }
+    },
+
+    nitro: {
+        // Replaces the `{{WEBINY_*}}` placeholders above with environment variables at runtime.
+        experimental: { envExpansion: true }
     },
 
     vite: {
@@ -29,18 +36,5 @@ export default defineNuxtConfig({
             tailwindcss(),
             await injectThemeCss(r("app/theme/theme.css"))
         ]
-    },
-
-    // Allow the Webiny editor to embed this site in an iframe.
-    routeRules: {
-        "/**": {
-            headers: {
-                "Content-Security-Policy": [
-                    "frame-ancestors",
-                    process.env.WEBINY_ADMIN_HOST ?? "http://localhost:3001",
-                    ...(process.env.WEBINY_ADDITIONAL_FRAME_ANCESTORS ?? "").split(",").filter(Boolean)
-                ].join(" ")
-            }
-        }
     }
 });
