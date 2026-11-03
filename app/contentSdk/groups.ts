@@ -1,15 +1,15 @@
-import { registerComponentGroup, type ComponentManifest } from "@webiny/website-builder-nuxt";
+import type { ComponentGroup, ComponentManifest } from "@webiny/sdk-nuxt";
 
-export const registerComponentGroups = () => {
-    registerComponentGroup({
+export const componentGroups: ComponentGroup[] = [
+    {
         name: "basic",
         label: "Basic",
         description: "Components for simple content creation"
-    });
-    registerComponentGroup({
+    },
+    {
         name: "custom",
         label: "Custom",
         description: "Assorted custom components",
         filter: (component: ComponentManifest) => !component.group
-    });
-};
+    }
+];

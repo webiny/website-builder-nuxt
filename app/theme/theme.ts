@@ -1,4 +1,4 @@
-import { createTheme } from "@webiny/website-builder-nuxt";
+import { createTheme } from "@webiny/sdk-nuxt";
 
 // `__THEME_CSS__` is replaced at build time by the injectThemeCss Vite plugin.
 declare const __THEME_CSS__: string;

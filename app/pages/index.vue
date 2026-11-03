@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { DocumentRenderer } from "@webiny/website-builder-nuxt";
+import { DocumentRenderer } from "@webiny/sdk-nuxt";
 import { editorComponents } from "~/editorComponents";
 
 const slug = computed(() => [] as string[]);

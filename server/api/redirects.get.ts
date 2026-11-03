@@ -1,4 +1,4 @@
-import { contentSdk } from "@webiny/website-builder-nuxt";
+import { sdk } from "@webiny/sdk-nuxt";
 import { initializeContentSdk } from "~/contentSdk/initializeContentSdk";
 
 const REDIRECTS_TTL = 60; // seconds
@@ -21,7 +21,8 @@ export default defineEventHandler(async event => {
 
     initializeContentSdk({ tenantId: tenantId || undefined });
 
-    const redirect = await contentSdk.getRedirectByPath(pathname);
+    const result = await sdk.wb.getRedirectByPath(pathname);
+    const redirect = result.isOk() ? result.value : undefined;
 
     if (redirect) {
         setResponseHeaders(event, {

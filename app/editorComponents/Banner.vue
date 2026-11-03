@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { ComponentProps } from "@webiny/website-builder-nuxt";
+import type { ComponentProps } from "@webiny/sdk-nuxt";
 
 interface BannerInputs {
     headline: string;
