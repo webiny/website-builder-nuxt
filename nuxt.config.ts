@@ -1,6 +1,6 @@
 import path from "path";
 import tailwindcss from "@tailwindcss/vite";
-import { injectThemeCss } from "@webiny/sdk-nuxt/vite.js";
+import { injectThemeCss } from "@webiny/website-builder-nuxt/vite";
 
 const r = (p: string) => path.resolve(__dirname, p);
 
