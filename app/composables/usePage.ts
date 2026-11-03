@@ -14,7 +14,7 @@ interface Language {
 
 export function usePage(slug: ComputedRef<string[]>) {
     const route = useRoute();
-    const config = useRuntimeConfig();
+    const config = useWebinyConfig();
 
     // ---- Preview / editing mode ------------------------------------------
     // decode: v => v prevents Nuxt's default JSON.parse from turning "1" into the number 1.
@@ -25,8 +25,7 @@ export function usePage(slug: ComputedRef<string[]>) {
     // ---- Tenant ----------------------------------------------------------
     const tenantId = computed(
         () =>
-            String(route.query["wb.tenant"] || "") ||
-            String(config.public.webinyApiTenant)
+            String(route.query["wb.tenant"] || "") || config.apiTenant
     );
 
     // When in preview mode, build a wb.* query string from the route so PreviewSdk
