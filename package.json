@@ -7,13 +7,14 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "typecheck": "nuxt typecheck"
   },
   "dependencies": {
-    "@webiny/sdk": "6.4.0-beta.5",
-    "@webiny/website-builder-nuxt": "6.4.0-beta.6",
-    "@webiny/website-builder-vue": "6.4.0-beta.6",
-    "@webiny/website-builder-sdk": "6.4.0-beta.6",
+    "@webiny/sdk": "6.5.1",
+    "@webiny/website-builder-nuxt": "6.5.1",
+    "@webiny/website-builder-vue": "6.5.1",
+    "@webiny/website-builder-sdk": "6.5.1",
     "deep-equal": "^2.2.3",
     "nuxt": "^4.4.2",
     "vue": "^3.5.32",
@@ -22,8 +23,9 @@
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.2.0",
+    "@types/node": "^22.19.15",
     "tailwindcss": "^4.2.0",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "vue-tsc": "^3.3.14"
   }
 }
-  

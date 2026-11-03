@@ -9,31 +9,28 @@ type AnyComponent = (props: any) => any;
 export const editorComponents = [
     createComponent(Hero1 as unknown as AnyComponent, {
         name: "Webiny/Hero",
-        label: "Hero #12345",
-        inputs: []
+        label: "Hero",
+        inputs: {}
     }),
     createComponent(Banner as unknown as AnyComponent, {
         name: "Custom/Banner",
         label: "Banner",
-        inputs: [
-            createTextInput({
-                name: "headline",
+        inputs: {
+            headline: createTextInput({
                 label: "Headline",
                 description: "The main headline text displayed on the banner.",
                 defaultValue: "Ready to get started?"
             }),
-            createTextInput({
-                name: "ctaLabel",
+            ctaLabel: createTextInput({
                 label: "Button Label",
                 description: "The text displayed on the call-to-action button.",
                 defaultValue: "Get started"
             }),
-            createTextInput({
-                name: "ctaUrl",
+            ctaUrl: createTextInput({
                 label: "Button URL",
                 description: "The URL the button links to.",
                 defaultValue: "/"
             })
-        ]
+        }
     })
 ];
