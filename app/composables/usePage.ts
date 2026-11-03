@@ -1,8 +1,7 @@
 /**
  * Shared page logic used by both index.vue (root /) and [...slug].vue (all other paths).
  */
-import { contentSdk } from "@webiny/website-builder-nuxt";
-import { Webiny } from "@webiny/sdk";
+import { sdk } from "@webiny/sdk-nuxt";
 import { initializeContentSdk } from "~/contentSdk/initializeContentSdk";
 import { theme } from "~/theme/theme";
 import { normalizeSlug } from "~/utils/normalizeSlug";
@@ -30,14 +29,6 @@ export function usePage(slug: ComputedRef<string[]>) {
             String(config.public.webinyApiTenant)
     );
 
-    function getWebinySdk() {
-        return new Webiny({
-            endpoint: String(config.public.webinyApiHost),
-            token: String(config.public.webinyApiKey),
-            tenant: tenantId.value
-        });
-    }
-
     // When in preview mode, build a wb.* query string from the route so PreviewSdk
     // can call getPageById() directly without relying on the fragile headers provider.
     const previewParams = computed(() =>
@@ -53,14 +44,14 @@ export function usePage(slug: ComputedRef<string[]>) {
         () => `page:${slug.value.join("/")}:${isPreview.value}`,
         async () => {
             initializeContentSdk({ tenantId: tenantId.value, preview: isPreview.value, previewParams: previewParams.value, theme });
-            return await contentSdk.getPage(normalizeSlug(slug.value));
+            const result = await sdk.wb.getPage(normalizeSlug(slug.value));
+            return result.isOk() ? result.value : null;
         }
     );
 
     // ---- Languages -------------------------------------------------------
     const { data: languages } = useAsyncData("languages", async () => {
         try {
-            const sdk = getWebinySdk();
             const result = await sdk.languages.listLanguages();
             return result.isFail() ? ([] as Language[]) : (result.value as Language[]);
         } catch {

@@ -1,5 +1,5 @@
-import { contentSdk, type WebsiteBuilderThemeInput } from "@webiny/website-builder-nuxt";
-import { registerComponentGroups } from "./groups";
+import { sdk, type WebsiteBuilderThemeInput } from "@webiny/sdk-nuxt";
+import { componentGroups } from "./groups";
 
 interface Options {
     tenantId?: string;
@@ -9,21 +9,17 @@ interface Options {
 }
 
 /**
- * Initialises the Webiny content SDK.
- * Must be called before any contentSdk methods are used (typically in useAsyncData).
+ * Initialises the Webiny SDK.
+ * Must be called before any sdk methods are used (typically in useAsyncData).
  */
 export const initializeContentSdk = ({ tenantId, preview, previewParams, theme }: Options = {}) => {
     const config = useRuntimeConfig();
 
-    contentSdk.init(
-        {
-            apiKey: String(config.public.webinyApiKey),
-            apiHost: String(config.public.webinyApiHost),
-            apiTenant: tenantId ?? String(config.public.webinyApiTenant),
-            preview,
-            previewParams,
-            theme
-        },
-        registerComponentGroups
-    );
+    sdk.init({
+        endpoint: String(config.public.webinyApiHost),
+        token: String(config.public.webinyApiKey),
+        tenant: tenantId ?? String(config.public.webinyApiTenant),
+        preview,
+        wb: { theme, previewParams, componentGroups }
+    });
 };
