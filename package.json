@@ -8,6 +8,7 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
+    "typecheck": "nuxt typecheck",
     "overlay:local": "node scripts/overlay-local-webiny.mjs"
   },
   "dependencies": {
@@ -25,8 +26,9 @@
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.2.0",
+    "@types/node": "^22.19.15",
     "tailwindcss": "^4.2.0",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "vue-tsc": "^3.3.14"
   }
 }
-  

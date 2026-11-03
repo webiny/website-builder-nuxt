@@ -1,6 +1,8 @@
 # Webiny Website Builder — Nuxt Starter
 
-A Nuxt 3 starter kit for building sites powered by Webiny Website Builder.
+A Nuxt 4 starter kit for building sites powered by Webiny Website Builder.
+
+This branch works with Webiny 6.5 (`@webiny/*` packages at `6.5.1`).
 
 ---
 
@@ -13,20 +15,29 @@ Follow the [Learn Webiny Website Builder](https://www.webiny.com/learn/course/we
 Copy the block below into a `.env` file at the project root and fill in your values.
 
 ```bash
-# Required — your Webiny API credentials.
+# Required. Your Webiny API credentials.
 # Find these in Webiny Admin → Website Builder → Configure Starter Kit (select Nuxt).
 WEBINY_API_KEY=your-api-key
 WEBINY_API_HOST=https://your-api.cloudfront.net
 WEBINY_API_TENANT=root
 
-# Required — URL of your Webiny Admin app.
+# Required. URL of your Webiny Admin app.
 # Allows the editor to embed this site in an iframe for live preview/editing.
 WEBINY_ADMIN_HOST=https://your-admin.cloudfront.net
 
-# Optional — extra origins allowed to embed this site, comma-separated.
+# Optional. Extra origins allowed to embed this site, comma-separated.
 # Useful when running multiple Admin instances locally.
 # WEBINY_ADDITIONAL_FRAME_ANCESTORS=https://admin2.localhost,https://admin3.localhost
 ```
+
+The site reads these variables when it runs, not when it is built. `nuxt dev` loads them from `.env`. For a production build, set them in the environment of the server process:
+
+```bash
+yarn build
+WEBINY_API_KEY=... WEBINY_API_HOST=... WEBINY_ADMIN_HOST=... node .output/server/index.mjs
+```
+
+One build can run against any Webiny project this way. In code, read them with `useWebinyConfig()`. `WEBINY_API_TENANT` defaults to `root`.
 
 ## Documentation
 
