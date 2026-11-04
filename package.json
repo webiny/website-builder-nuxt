@@ -8,13 +8,12 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "typecheck": "nuxt typecheck"
+    "typecheck": "nuxt typecheck",
+    "overlay:local": "node scripts/overlay-local-webiny.mjs"
   },
   "dependencies": {
-    "@webiny/sdk": "6.5.1",
-    "@webiny/website-builder-nuxt": "6.5.1",
-    "@webiny/website-builder-vue": "6.5.1",
-    "@webiny/website-builder-sdk": "6.5.1",
+    "@webiny/sdk-nuxt": "6.5.2-beta.0",
+    "@webiny/website-builder-nuxt": "6.5.2-beta.0",
     "deep-equal": "^2.2.3",
     "nuxt": "^4.4.2",
     "vue": "^3.5.32",

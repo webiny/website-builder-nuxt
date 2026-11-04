@@ -2,7 +2,11 @@
 
 A Nuxt 4 starter kit for building sites powered by Webiny Website Builder.
 
-This branch works with Webiny 6.5 (`@webiny/*` packages at `6.5.1`).
+This branch works with Webiny 6.5. It currently uses the `6.5.2-beta.0` release of `@webiny/sdk-nuxt` and `@webiny/website-builder-nuxt`, the first release of the Nuxt SDK. To use it, upgrade your Webiny project to the same version:
+
+```bash
+yarn webiny upgrade 6.5.2-beta.0 --debug
+```
 
 ---
 
