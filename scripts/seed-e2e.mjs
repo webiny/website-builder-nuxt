@@ -79,6 +79,8 @@ console.log("category", category.entryId);
 const product = await createAndPublish("Product", {
     values: {
         name: "Nuxt e2e product",
+        sku: "NUXT-E2E-1",
+        price: 42,
         category: { modelId: "productCategory", id: category.id }
     }
 });

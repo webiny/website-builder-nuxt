@@ -2013,71 +2013,89 @@
   resolved "https://registry.npmjs.org/@vue/shared/-/shared-3.5.44.tgz"
   integrity sha512-H82XLH0DjmSOdbEwO15x3QTo1f5PWEtv237eLpYKc0mqLu+B8hnq16lFWmuBmNurkeiG3wr+oM1FhOll/YVFRg==
 
-"@webiny/cms-sdk@6.5.1":
-  version "6.5.1"
-  resolved "https://registry.npmjs.org/@webiny/cms-sdk/-/cms-sdk-6.5.1.tgz"
-  integrity sha512-8zdYvcuXBrR15T6nCQ45DS1+5KpHyDJWSbPexCnUuJwYDmb77g9stSBZ4FSAts6cfqfT9BotZDsRzrxw2FxFpg==
+"@webiny/cms-sdk@6.5.2-beta.0":
+  version "6.5.2-beta.0"
+  resolved "https://registry.yarnpkg.com/@webiny/cms-sdk/-/cms-sdk-6.5.2-beta.0.tgz#1a76a077d5d584610ca2c58b8282d1d92f4946ac"
+  integrity sha512-ejPCSKRYqc86kzCqb+5tVvb6bsdMY1p2riy10k76UzVOLq6TbqY23EBgJJgl5z14b2DM1WyZfxewEJT9pKLwPg==
   dependencies:
-    "@webiny/sdk" "6.5.1"
+    "@webiny/sdk" "6.5.2-beta.0"
     fast-json-patch "3.1.1"
-    mobx "7.1.1"
+    mobx "7.1.3"
 
-"@webiny/sdk-frontend@6.5.1":
-  version "6.5.1"
-  resolved "https://registry.npmjs.org/@webiny/sdk-frontend/-/sdk-frontend-6.5.1.tgz"
-  integrity sha512-JPvbWpd7xhIhkN7xacUvInYfCFN5B4+UnzIz+b3WwqxKBdlR76nFyPAHlny++v2ujYbSz26KORcfRoFHxkJ8gA==
+"@webiny/cms-vue@6.5.2-beta.0":
+  version "6.5.2-beta.0"
+  resolved "https://registry.yarnpkg.com/@webiny/cms-vue/-/cms-vue-6.5.2-beta.0.tgz#2aa74c91759e47cbf8d9879619dacdff7b94a242"
+  integrity sha512-SW/UyIfOm7TYc+7WUry6PTVOtjKdLcD5X9bNJqU2cL1e/VB/t27qZhr2G0l1Wm1C3kN0rJr8ZSKko96lB90WhA==
   dependencies:
-    "@webiny/cms-sdk" "6.5.1"
-    "@webiny/sdk" "6.5.1"
-    "@webiny/website-builder-sdk" "6.5.1"
+    "@webiny/cms-sdk" "6.5.2-beta.0"
+    mobx "7.1.3"
 
-"@webiny/sdk@6.5.1":
-  version "6.5.1"
-  resolved "https://registry.npmjs.org/@webiny/sdk/-/sdk-6.5.1.tgz"
-  integrity sha512-b/f4bGv0Cg0d0eMJRQS4SYkOsMTh91/AgdMDzfcI3NOCs1uxxh38iexiXIFEW4K2PJy182DFvKYDauj8+cs4dw==
+"@webiny/sdk-frontend@6.5.2-beta.0":
+  version "6.5.2-beta.0"
+  resolved "https://registry.yarnpkg.com/@webiny/sdk-frontend/-/sdk-frontend-6.5.2-beta.0.tgz#5c7bc4f52e60ee421a624a47d9a9dafbb479615e"
+  integrity sha512-/FM/H1V1n53a2VbCn3QnvHoEeHyT1yFR2ZgBfLTC61aFfXPfGutJT0Twk9tY4WUgM4vusxNKLfDVMdrEUhcp2A==
+  dependencies:
+    "@webiny/cms-sdk" "6.5.2-beta.0"
+    "@webiny/sdk" "6.5.2-beta.0"
+    "@webiny/website-builder-sdk" "6.5.2-beta.0"
+
+"@webiny/sdk-nuxt@6.5.2-beta.0":
+  version "6.5.2-beta.0"
+  resolved "https://registry.yarnpkg.com/@webiny/sdk-nuxt/-/sdk-nuxt-6.5.2-beta.0.tgz#98a12d52a4554141aa9ea10014a314133d2d56fb"
+  integrity sha512-/+kB62mQrPJnlXb5QRRsMjUwGLyQZJTjHOejpFTIcXuWKfpHhql4OkAKo+AzbSs+BLrb/4nRy2yeYIjCA/eldw==
+  dependencies:
+    "@webiny/cms-vue" "6.5.2-beta.0"
+    "@webiny/sdk-frontend" "6.5.2-beta.0"
+    "@webiny/website-builder-nuxt" "6.5.2-beta.0"
+
+"@webiny/sdk@6.5.2-beta.0":
+  version "6.5.2-beta.0"
+  resolved "https://registry.yarnpkg.com/@webiny/sdk/-/sdk-6.5.2-beta.0.tgz#86103464bc03ede274ae2ab06e8bbf1ebba659fe"
+  integrity sha512-2c86thmpnmvY624UwzD0jdKyVrjNB/Yu0reQOw+lGj5rSF7YEbKrVsiYUjbiTAwmCxG7Wq4UD51KPhqNYy32VQ==
   dependencies:
     p-map "7.1.1"
     p-retry "8.0.1"
     standardwebhooks "1.1.1"
     zod "4.6.7"
 
-"@webiny/website-builder-nuxt@6.5.1":
-  version "6.5.1"
-  resolved "https://registry.npmjs.org/@webiny/website-builder-nuxt/-/website-builder-nuxt-6.5.1.tgz"
-  integrity sha512-aMFxwLlbUKbmeupAZwVA7YvRj79qxinFg2P4akWVVAciKeX+RE4vXltLSjpeKzH8ofHGd4834IZ84nzubhXQgg==
+"@webiny/website-builder-nuxt@6.5.2-beta.0":
+  version "6.5.2-beta.0"
+  resolved "https://registry.yarnpkg.com/@webiny/website-builder-nuxt/-/website-builder-nuxt-6.5.2-beta.0.tgz#c33a0ce8a6d40209c56c6a4bcc6419561cc6ad96"
+  integrity sha512-tj/wA22S1fIXC/5IB27/5IrombfHeZbGWhunkGI+PakCFOKzXdmqE5AHPJiqm5TIl5N6T1wwMls6Iyg/eD7A6g==
   dependencies:
-    "@webiny/website-builder-vue" "6.5.1"
-    postcss "8.5.31"
+    "@webiny/website-builder-vue" "6.5.2-beta.0"
+    postcss "8.5.32"
     postcss-import "17.0.1"
 
-"@webiny/website-builder-sdk@6.5.1":
-  version "6.5.1"
-  resolved "https://registry.npmjs.org/@webiny/website-builder-sdk/-/website-builder-sdk-6.5.1.tgz"
-  integrity sha512-rINEuAsqtwb+WzW7X3qQ98AGn4RLSgFEQ+JgC21+0JHcsX6+MRd0TPoVNdoClmSmvhytNHb/MEQ9+oeVEL7lVg==
+"@webiny/website-builder-sdk@6.5.2-beta.0":
+  version "6.5.2-beta.0"
+  resolved "https://registry.yarnpkg.com/@webiny/website-builder-sdk/-/website-builder-sdk-6.5.2-beta.0.tgz#f872fe7b3f3066a5a395454fa366b6470c9f5bb2"
+  integrity sha512-mOFid0eFqhy5tfhrJWcx2ImMYig6sYn8R9K4mEhnCzwe+zSMmKtZYPFP4nAOoS74T3xa/guhzPFLtVcLzLUMEA==
   dependencies:
-    "@webiny/sdk" "6.5.1"
+    "@webiny/sdk" "6.5.2-beta.0"
     csstype "3.2.3"
     deep-equal "2.2.3"
     deepmerge "4.3.1"
     fast-json-patch "3.1.1"
     fast-json-stable-stringify "2.1.0"
-    is-hotkey "0.2.0"
+    is-hotkey "0.2.1"
     lodash "4.18.1"
     matcher "7.0.0"
-    mobx "7.1.1"
+    mobx "7.1.3"
     nanoid "6.0.2"
     nanoid-dictionary "5.0.0"
     pino "10.4.0"
     pino-pretty "13.2.0"
 
-"@webiny/website-builder-vue@6.5.1":
-  version "6.5.1"
-  resolved "https://registry.npmjs.org/@webiny/website-builder-vue/-/website-builder-vue-6.5.1.tgz"
-  integrity sha512-jc2H/I6omfxL3f8vPqmOVq/rRta+34Suc/tLsHGG3/zM9ZBYaS/yWsMmhh9NqgVVlosnOXWRehHmUqOn4QpfDg==
+"@webiny/website-builder-vue@6.5.2-beta.0":
+  version "6.5.2-beta.0"
+  resolved "https://registry.yarnpkg.com/@webiny/website-builder-vue/-/website-builder-vue-6.5.2-beta.0.tgz#a74543cbdc203900f55a081b682f0d5c9d7e5a52"
+  integrity sha512-dDG/b49h6+iWzXEF+v30AbB5XkNm7w4I2/1eXjKVT86mIzL0U1jFuCn/Mn3B/5+43JD2tgexp/gpJSNQ/VPwJw==
   dependencies:
-    "@webiny/website-builder-sdk" "6.5.1"
+    "@webiny/cms-sdk" "6.5.2-beta.0"
+    "@webiny/website-builder-sdk" "6.5.2-beta.0"
     deep-equal "2.2.3"
-    mobx "7.1.1"
+    mobx "7.1.3"
     vue "3.5.44"
 
 abbrev@^3.0.0:
@@ -3608,10 +3626,10 @@ is-glob@^4.0.1, is-glob@^4.0.3:
   dependencies:
     is-extglob "^2.1.1"
 
-is-hotkey@0.2.0:
-  version "0.2.0"
-  resolved "https://registry.npmjs.org/is-hotkey/-/is-hotkey-0.2.0.tgz"
-  integrity sha512-UknnZK4RakDmTgz4PI1wIph5yxSs/mvChWs9ifnlXsKuXgWmOkY/hAE0H/k2MIqH0RlRye0i1oC07MCRSD28Mw==
+is-hotkey@0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/is-hotkey/-/is-hotkey-0.2.1.tgz#423614b7ee3178af13f97b31373ffcb4221799f6"
+  integrity sha512-r/T66LS/FY5o4Duw1rre/wMTngTuuRjzIqKioM/sWaqXcIBnCS5FIpqsoKIYox4nuWUR/aQL/d2PCdW4PFtQzw==
 
 is-in-ssh@^1.0.0:
   version "1.0.0"
@@ -4116,10 +4134,10 @@ mlly@^1.7.4, mlly@^1.8.0, mlly@^1.8.2:
     pkg-types "^1.3.1"
     ufo "^1.6.3"
 
-mobx@7.1.1:
-  version "7.1.1"
-  resolved "https://registry.npmjs.org/mobx/-/mobx-7.1.1.tgz"
-  integrity sha512-IBnj1k7aoSlpNcuI5tr3/nykyDIUzm0+7Zu9IKBJn0IhJgeIKp26KLAsCFvCPpDmcjiszfg5XOeTJTQi/JoEOw==
+mobx@7.1.3:
+  version "7.1.3"
+  resolved "https://registry.yarnpkg.com/mobx/-/mobx-7.1.3.tgz#3ffbca92fbd1dd2ad324e8a06eb3649d5adf26aa"
+  integrity sha512-H2NcS5ylMsqYn7v4WpSdzv5YWPmw5XTV6pG2NvY0qYbh95FXbswZJ7pn7wU0rOtUvRzk+3t4AOX2eircoN+vBg==
 
 mocked-exports@^0.1.1:
   version "0.1.1"
@@ -4954,7 +4972,16 @@ postcss-value-parser@^4.0.0, postcss-value-parser@^4.2.0:
   resolved "https://registry.npmjs.org/postcss-value-parser/-/postcss-value-parser-4.2.0.tgz"
   integrity sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==
 
-postcss@8.5.31, postcss@^8.5.14, postcss@^8.5.29, postcss@^8.5.6:
+postcss@8.5.32:
+  version "8.5.32"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.5.32.tgz#fbccef8388a0c77508c713bfd37728d646595803"
+  integrity sha512-LJlKCCAUFKOuZxipUdYw1NzIITEsPcgyOG9LkvRJvuKj/bRzbuRY0ARXvL0pWGpsZvn8jku+LMep2eU0seHp8g==
+  dependencies:
+    nanoid "^3.3.20"
+    picocolors "^1.1.1"
+    source-map-js "^1.2.2"
+
+postcss@^8.5.14, postcss@^8.5.29, postcss@^8.5.6:
   version "8.5.31"
   resolved "https://registry.npmjs.org/postcss/-/postcss-8.5.31.tgz"
   integrity sha512-YUbWYCgErwnMAVkjUnYa+KlMBzGpHwiIt/DE7f0G33AuX2LH9UcTk6KgWxd3zRU+pN3u/C+Xl3EnMLM4Hea7Sg==
